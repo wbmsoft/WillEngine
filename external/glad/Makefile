@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirill/wbmsoft/WillEngine/CMakeFiles /home/kirill/wbmsoft/WillEngine/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/kirill/wbmsoft/WillEngine && $(CMAKE_COMMAND) -E cmake_progress_start /home/kirill/wbmsoft/WillEngine/CMakeFiles /home/kirill/wbmsoft/WillEngine/external/glad/CMakeFiles/progress.marks
+	cd /home/kirill/wbmsoft/WillEngine && $(MAKE) -f CMakeFiles/Makefile2 external/glad/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirill/wbmsoft/WillEngine/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/kirill/wbmsoft/WillEngine && $(MAKE) -f CMakeFiles/Makefile2 external/glad/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,84 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/kirill/wbmsoft/WillEngine && $(MAKE) -f CMakeFiles/Makefile2 external/glad/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/kirill/wbmsoft/WillEngine && $(MAKE) -f CMakeFiles/Makefile2 external/glad/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kirill/wbmsoft/WillEngine && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named WillEngine
+# Convenience name for target.
+external/glad/CMakeFiles/glad.dir/rule:
+	cd /home/kirill/wbmsoft/WillEngine && $(MAKE) -f CMakeFiles/Makefile2 external/glad/CMakeFiles/glad.dir/rule
+.PHONY : external/glad/CMakeFiles/glad.dir/rule
 
-# Build rule for target.
-WillEngine: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 WillEngine
-.PHONY : WillEngine
+# Convenience name for target.
+glad: external/glad/CMakeFiles/glad.dir/rule
 
-# fast build rule for target.
-WillEngine/fast:
-	$(MAKE) -f CMakeFiles/WillEngine.dir/build.make CMakeFiles/WillEngine.dir/build
-.PHONY : WillEngine/fast
-
-#=============================================================================
-# Target rules for targets named glfw
-
-# Build rule for target.
-glfw: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 glfw
-.PHONY : glfw
-
-# fast build rule for target.
-glfw/fast:
-	$(MAKE) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/build
-.PHONY : glfw/fast
-
-#=============================================================================
-# Target rules for targets named glad
-
-# Build rule for target.
-glad: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 glad
 .PHONY : glad
 
 # fast build rule for target.
 glad/fast:
-	$(MAKE) -f external/glad/CMakeFiles/glad.dir/build.make external/glad/CMakeFiles/glad.dir/build
+	cd /home/kirill/wbmsoft/WillEngine && $(MAKE) -f external/glad/CMakeFiles/glad.dir/build.make external/glad/CMakeFiles/glad.dir/build
 .PHONY : glad/fast
 
-main.o: main.cpp.o
+src/glad.o: src/glad.c.o
 
-.PHONY : main.o
+.PHONY : src/glad.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/WillEngine.dir/build.make CMakeFiles/WillEngine.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/glad.c.o:
+	cd /home/kirill/wbmsoft/WillEngine && $(MAKE) -f external/glad/CMakeFiles/glad.dir/build.make external/glad/CMakeFiles/glad.dir/src/glad.c.o
+.PHONY : src/glad.c.o
 
-main.i: main.cpp.i
+src/glad.i: src/glad.c.i
 
-.PHONY : main.i
+.PHONY : src/glad.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/WillEngine.dir/build.make CMakeFiles/WillEngine.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/glad.c.i:
+	cd /home/kirill/wbmsoft/WillEngine && $(MAKE) -f external/glad/CMakeFiles/glad.dir/build.make external/glad/CMakeFiles/glad.dir/src/glad.c.i
+.PHONY : src/glad.c.i
 
-main.s: main.cpp.s
+src/glad.s: src/glad.c.s
 
-.PHONY : main.s
+.PHONY : src/glad.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/WillEngine.dir/build.make CMakeFiles/WillEngine.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/glad.c.s:
+	cd /home/kirill/wbmsoft/WillEngine && $(MAKE) -f external/glad/CMakeFiles/glad.dir/build.make external/glad/CMakeFiles/glad.dir/src/glad.c.s
+.PHONY : src/glad.c.s
 
 # Help Target
 help:
@@ -184,12 +160,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... WillEngine"
-	@echo "... glfw"
 	@echo "... glad"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/glad.o"
+	@echo "... src/glad.i"
+	@echo "... src/glad.s"
 .PHONY : help
 
 
@@ -201,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kirill/wbmsoft/WillEngine && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

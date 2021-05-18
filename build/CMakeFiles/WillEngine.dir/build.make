@@ -80,6 +80,7 @@ WillEngine_EXTERNAL_OBJECTS =
 WillEngine: CMakeFiles/WillEngine.dir/main.cpp.o
 WillEngine: CMakeFiles/WillEngine.dir/build.make
 WillEngine: external/glfw/src/libglfw3.a
+WillEngine: external/glad/libglad.a
 WillEngine: /usr/lib/x86_64-linux-gnu/librt.so
 WillEngine: /usr/lib/x86_64-linux-gnu/libm.so
 WillEngine: CMakeFiles/WillEngine.dir/link.txt

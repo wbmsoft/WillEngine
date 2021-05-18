@@ -55,19 +55,40 @@ CMAKE_BINARY_DIR = /home/kirill/wbmsoft/WillEngine
 # The main recursive "all" target.
 all: CMakeFiles/WillEngine.dir/all
 all: external/glfw/all
+all: external/glad/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: external/glfw/preinstall
+preinstall: external/glad/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/WillEngine.dir/clean
 clean: external/glfw/clean
+clean: external/glad/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory external/glad
+
+# Recursive "all" directory target.
+external/glad/all: external/glad/CMakeFiles/glad.dir/all
+
+.PHONY : external/glad/all
+
+# Recursive "preinstall" directory target.
+external/glad/preinstall:
+
+.PHONY : external/glad/preinstall
+
+# Recursive "clean" directory target.
+external/glad/clean: external/glad/CMakeFiles/glad.dir/clean
+
+.PHONY : external/glad/clean
 
 #=============================================================================
 # Directory level rules for directory external/glfw
@@ -110,6 +131,7 @@ external/glfw/src/clean: external/glfw/src/CMakeFiles/glfw.dir/clean
 
 # All Build rule for target.
 CMakeFiles/WillEngine.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
+CMakeFiles/WillEngine.dir/all: external/glad/CMakeFiles/glad.dir/all
 	$(MAKE) -f CMakeFiles/WillEngine.dir/build.make CMakeFiles/WillEngine.dir/depend
 	$(MAKE) -f CMakeFiles/WillEngine.dir/build.make CMakeFiles/WillEngine.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kirill/wbmsoft/WillEngine/CMakeFiles --progress-num=1,2 "Built target WillEngine"
@@ -117,7 +139,7 @@ CMakeFiles/WillEngine.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/WillEngine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirill/wbmsoft/WillEngine/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirill/wbmsoft/WillEngine/CMakeFiles 21
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/WillEngine.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirill/wbmsoft/WillEngine/CMakeFiles 0
 .PHONY : CMakeFiles/WillEngine.dir/rule
@@ -139,7 +161,7 @@ CMakeFiles/WillEngine.dir/clean:
 external/glfw/src/CMakeFiles/glfw.dir/all:
 	$(MAKE) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/depend
 	$(MAKE) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kirill/wbmsoft/WillEngine/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19 "Built target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kirill/wbmsoft/WillEngine/CMakeFiles --progress-num=5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21 "Built target glfw"
 .PHONY : external/glfw/src/CMakeFiles/glfw.dir/all
 
 # Build rule for subdir invocation for target.
@@ -158,6 +180,33 @@ glfw: external/glfw/src/CMakeFiles/glfw.dir/rule
 external/glfw/src/CMakeFiles/glfw.dir/clean:
 	$(MAKE) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/clean
 .PHONY : external/glfw/src/CMakeFiles/glfw.dir/clean
+
+#=============================================================================
+# Target rules for target external/glad/CMakeFiles/glad.dir
+
+# All Build rule for target.
+external/glad/CMakeFiles/glad.dir/all:
+	$(MAKE) -f external/glad/CMakeFiles/glad.dir/build.make external/glad/CMakeFiles/glad.dir/depend
+	$(MAKE) -f external/glad/CMakeFiles/glad.dir/build.make external/glad/CMakeFiles/glad.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kirill/wbmsoft/WillEngine/CMakeFiles --progress-num=3,4 "Built target glad"
+.PHONY : external/glad/CMakeFiles/glad.dir/all
+
+# Build rule for subdir invocation for target.
+external/glad/CMakeFiles/glad.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirill/wbmsoft/WillEngine/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 external/glad/CMakeFiles/glad.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirill/wbmsoft/WillEngine/CMakeFiles 0
+.PHONY : external/glad/CMakeFiles/glad.dir/rule
+
+# Convenience name for target.
+glad: external/glad/CMakeFiles/glad.dir/rule
+
+.PHONY : glad
+
+# clean rule for target.
+external/glad/CMakeFiles/glad.dir/clean:
+	$(MAKE) -f external/glad/CMakeFiles/glad.dir/build.make external/glad/CMakeFiles/glad.dir/clean
+.PHONY : external/glad/CMakeFiles/glad.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
