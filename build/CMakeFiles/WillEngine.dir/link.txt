@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/WillEngine.dir/main.cpp.o  -o WillEngine  external/glfw/src/libglfw3.a -lpthread /usr/lib/x86_64-linux-gnu/librt.so -lm -ldl 

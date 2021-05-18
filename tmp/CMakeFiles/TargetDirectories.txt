@@ -1,3 +1,0 @@
-/home/kirill/wbmsoft/WillEngine/tmp/CMakeFiles/rebuild_cache.dir
-/home/kirill/wbmsoft/WillEngine/tmp/CMakeFiles/edit_cache.dir
-/home/kirill/wbmsoft/WillEngine/tmp/CMakeFiles/main.dir

@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/kirill/wbmsoft/WillEngine")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/kirill/wbmsoft/WillEngine/tmp")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/kirill/wbmsoft/WillEngine")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)
