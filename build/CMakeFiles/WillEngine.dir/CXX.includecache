@@ -6,15 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/kirill/wbmsoft/WillEngine/main.cpp
-glad/glad.h
--
-GLFW/glfw3.h
--
-iostream
--
-
-external/glad/include/KHR/khrplatform.h
+../external/glad/include/KHR/khrplatform.h
 stdint.h
 -
 inttypes.h
@@ -22,11 +14,11 @@ inttypes.h
 stdint.h
 -
 
-external/glad/include/glad/glad.h
+../external/glad/include/glad/glad.h
 KHR/khrplatform.h
 -
 
-external/glfw/include/GLFW/glfw3.h
+../external/glfw/include/GLFW/glfw3.h
 stddef.h
 -
 stdint.h
@@ -68,5 +60,13 @@ OpenGL/gl.h
 GL/gl.h
 -
 GL/glext.h
+-
+
+/home/kirill/wbmsoft/WillEngine/main.cpp
+glad/glad.h
+-
+GLFW/glfw3.h
+-
+iostream
 -
 
