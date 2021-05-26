@@ -36,7 +36,7 @@
       <x>0</x>
       <y>230</y>
       <width>120</width>
-      <height>141</height>
+      <height>171</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -52,7 +52,7 @@
       <x>1120</x>
       <y>0</y>
       <width>120</width>
-      <height>371</height>
+      <height>401</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -68,7 +68,7 @@
       <x>120</x>
       <y>270</y>
       <width>1001</width>
-      <height>101</height>
+      <height>131</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -132,7 +132,6 @@
    <addaction name="menuHelp"/>
    <addaction name="menuHelp_2"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
   <action name="actionCreate_Project">
    <property name="text">
     <string>Create Project</string>
