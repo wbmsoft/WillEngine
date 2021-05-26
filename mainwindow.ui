@@ -133,6 +133,9 @@
    <addaction name="menuHelp_2"/>
   </widget>
   <action name="actionCreate_Project">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>Create Project</string>
    </property>
