@@ -32,6 +32,9 @@ if(ANDROID)
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
+    createprojectwindow.cpp
+    createprojectwindow.h
+    createprojectwindow.ui
   )
 else()
   add_executable(WillEngine
@@ -39,6 +42,9 @@ else()
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
+    createprojectwindow.cpp
+    createprojectwindow.h
+    createprojectwindow.ui
   )
 endif()
 
